@@ -1,0 +1,39 @@
+name: r2ai
+version: '0.8.2-git+a87c200'
+summary: local language model for radare2
+description: |
+  Run a language model in local, without internet, to entertain you or help answering questions about radare2 or reverse engineering in general.
+  Note that models used by r2ai are pulled from external sources which may behave different or respond unrealible information.
+  That's why there's an ongoing effort into improving the post-finetuning using memgpt-like techniques which can't get better without your help!
+website: https://www.radare.org/
+issues: https://github.com/radareorg/r2ai/issues
+contact: https://github.com/radareorg/radare2#community
+source-code: https://github.com/radareorg/r2ai-snap.git
+license: LGPL-3.0-only
+base: core24
+grade: stable
+confinement: strict
+apps:
+  r2ai:
+    command: bin/r2ai
+    plugs:
+      - network
+      - network-bind
+platforms:
+  amd64:
+    build-on: [amd64]
+    build-for: amd64
+  arm64:
+    build-on: [arm64]
+    build-for: arm64
+  armhf:
+    build-on: [armhf]
+    build-for: armhf
+parts:
+  r2ai:
+    plugin: python
+    source: https://github.com/radareorg/r2ai.git
+    source-type: git
+    source-depth: 1
+    source-commit: a87c2006df9348500dedeaf9052dd9a812ac572b
+    # source-tag: $SNAPCRAFT_PROJECT_VERSION
