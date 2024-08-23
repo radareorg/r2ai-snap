@@ -13,6 +13,8 @@ license: LGPL-3.0-only
 base: core24
 grade: stable
 confinement: strict
+environment:
+  HOME: $SNAP_USER_COMMON
 apps:
   r2ai:
     command: bin/r2ai
