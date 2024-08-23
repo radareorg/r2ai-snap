@@ -37,3 +37,5 @@ parts:
     source-depth: 1
     source-commit: a87c2006df9348500dedeaf9052dd9a812ac572b
     # source-tag: $SNAPCRAFT_PROJECT_VERSION
+    python-requirements:
+      - requirements.txt
