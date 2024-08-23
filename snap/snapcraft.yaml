@@ -19,6 +19,7 @@ apps:
     plugs:
       - network
       - network-bind
+      - opengl
 platforms:
   amd64:
     build-on: [amd64]
@@ -36,3 +37,6 @@ parts:
     # source-tag: $SNAPCRAFT_PROJECT_VERSION
     python-requirements:
       - requirements.txt
+    stage-packages:
+      - libgomp1
+      - libgomp-plugin-nvptx1
