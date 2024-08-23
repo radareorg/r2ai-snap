@@ -42,3 +42,4 @@ parts:
     stage-packages:
       - libgomp1
       - libgomp-plugin-nvptx1
+      # - libgomp-plugin-amdgcn1 # currently not avaiable for arm64
