@@ -30,7 +30,25 @@ platforms:
     build-on: [arm64]
     build-for: arm64
 parts:
+  radare2:
+    plugin: nil
+    build-attributes:
+      - no-patchelf
+    stage-snaps:
+      - radare2
+    override-stage: |
+      craftctl default
+      sed -i "s,$CRAFT_STAGE/snap/radare2/current,$CRAFT_STAGE," "$CRAFT_STAGE/lib/pkgconfig/"*.pc
+      sed -i "s,/snap/radare2/current,$CRAFT_STAGE," "$CRAFT_STAGE/include/libr/r_userconf.h" "$CRAFT_STAGE/lib/libyara.la"
+    prime:
+      - "-meta.radare2"
+      - "-share/sbom"
+    override-prime: |
+      craftctl default
+      sed -i "s,$CRAFT_STAGE,/snap/iaito/current," "$CRAFT_PRIME/lib/pkgconfig/"*.pc "$CRAFT_PRIME/include/libr/r_userconf.h" "$CRAFT_PRIME/lib/libyara.la"
   r2ai:
+    after:
+      - radare2
     plugin: python
     source: https://github.com/radareorg/r2ai.git
     source-type: git
