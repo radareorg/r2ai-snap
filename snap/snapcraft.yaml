@@ -8,7 +8,7 @@ description: |
 website: https://www.radare.org/
 issues: https://github.com/radareorg/r2ai/issues
 contact: https://github.com/radareorg/radare2#community
-source-code: https://github.com/radareorg/r2ai-snap.git
+source-code: https://github.com/radareorg/r2ai-snap
 license: LGPL-3.0-only
 base: core24
 grade: stable
