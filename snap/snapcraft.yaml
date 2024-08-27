@@ -45,7 +45,7 @@ parts:
       - "-share/sbom"
     override-prime: |
       craftctl default
-      sed -i "s,$CRAFT_STAGE,/snap/iaito/current," "$CRAFT_PRIME/lib/pkgconfig/"*.pc "$CRAFT_PRIME/include/libr/r_userconf.h" "$CRAFT_PRIME/lib/libyara.la"
+      sed -i "s,$CRAFT_STAGE,/snap/$SNAPCRAFT_PROJECT_NAME/current," "$CRAFT_PRIME/lib/pkgconfig/"*.pc "$CRAFT_PRIME/include/libr/r_userconf.h" "$CRAFT_PRIME/lib/libyara.la"
   r2ai:
     after:
       - radare2
