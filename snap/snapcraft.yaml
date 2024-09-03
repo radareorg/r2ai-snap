@@ -1,5 +1,5 @@
 name: r2ai
-version: '0.8.2-git+a87c200'
+version: '0.8.2-git+44b2102'
 summary: local language model for radare2
 description: |
   Run a language model in local, without internet, to entertain you or help answering questions about radare2 or reverse engineering in general.
@@ -35,7 +35,7 @@ parts:
     source: https://github.com/radareorg/r2ai.git
     source-type: git
     source-depth: 1
-    source-commit: a87c2006df9348500dedeaf9052dd9a812ac572b
+    source-commit: 44b2102c4a449ddf35e65012b1e31946e32f3e68
     # source-tag: $SNAPCRAFT_PROJECT_VERSION
     python-requirements:
       - requirements.txt
