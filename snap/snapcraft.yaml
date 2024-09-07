@@ -29,6 +29,9 @@ platforms:
   arm64:
     build-on: [arm64]
     build-for: arm64
+  armhf:
+    build-on: [armhf]
+    build-for: armhf
 parts:
   r2ai:
     plugin: python
@@ -40,6 +43,9 @@ parts:
       - requirements.txt
     stage-packages:
       - libgomp1
-      - libgomp-plugin-nvptx1
       - on amd64:
-          - libgomp-plugin-amdgcn1 # currently not avaiable for arm64
+          - libgomp-plugin-amdgcn1
+          - libgomp-plugin-hsa1
+          - libgomp-plugin-nvptx1
+      - on arm64:
+          - libgomp-plugin-nvptx1
