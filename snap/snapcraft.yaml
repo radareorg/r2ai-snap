@@ -43,6 +43,7 @@ parts:
       - requirements.txt
     build-packages:
       - cmake
+      - libffi-dev
     stage-packages:
       - libgomp1
       - on amd64:
