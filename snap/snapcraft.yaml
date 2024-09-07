@@ -32,6 +32,9 @@ platforms:
   armhf:
     build-on: [armhf]
     build-for: armhf
+  ppc64el:
+    build-on: [ppc64el]
+    build-for: ppc64el
 parts:
   r2ai:
     plugin: python
