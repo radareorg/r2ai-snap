@@ -1,5 +1,5 @@
 name: r2ai
-version: '0.8.2-git+44b2102'
+version: '0.8.4'
 summary: local language model for radare2
 description: |
   Run a language model in local, without internet, to entertain you or help answering questions about radare2 or reverse engineering in general.
@@ -35,12 +35,11 @@ parts:
     source: https://github.com/radareorg/r2ai.git
     source-type: git
     source-depth: 1
-    source-commit: 44b2102c4a449ddf35e65012b1e31946e32f3e68
-    # source-tag: $SNAPCRAFT_PROJECT_VERSION
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
     python-requirements:
       - requirements.txt
     stage-packages:
       - libgomp1
       - libgomp-plugin-nvptx1
       - on amd64:
-        - libgomp-plugin-amdgcn1 # currently not avaiable for arm64
+          - libgomp-plugin-amdgcn1 # currently not avaiable for arm64
