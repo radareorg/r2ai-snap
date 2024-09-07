@@ -45,11 +45,12 @@ parts:
     python-requirements:
       - requirements.txt
     build-packages:
-      - on armhf: # since missing prebuild pip packages
-          - cmake
-          - libffi-dev
-          - libsentencepiece-dev
-          - pkg-config
+      # only used when prebuild pip packages are missing
+      - cmake
+      - libffi-dev
+      - libprotobuf-lite32t64
+      - libsentencepiece-dev
+      - pkg-config
     stage-packages:
       - libgomp1
       - on amd64:
