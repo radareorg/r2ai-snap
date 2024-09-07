@@ -41,6 +41,8 @@ parts:
     source-tag: $SNAPCRAFT_PROJECT_VERSION
     python-requirements:
       - requirements.txt
+    build-packages:
+      - cmake
     stage-packages:
       - libgomp1
       - on amd64:
