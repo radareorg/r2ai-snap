@@ -45,6 +45,7 @@ parts:
       - on armhf: # since missing prebuild pip packages
           - cmake
           - libffi-dev
+          - libsentencepiece-dev
           - pkg-config
     stage-packages:
       - libgomp1
