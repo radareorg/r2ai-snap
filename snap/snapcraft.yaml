@@ -48,11 +48,14 @@ parts:
       # only used when prebuild pip packages are missing
       - cmake
       - libffi-dev
-      - libprotobuf-lite32t64
+      - libprotobuf-dev
       - libsentencepiece-dev
       - pkg-config
     stage-packages:
+      - libffi8
       - libgomp1
+      - libprotobuf-lite32t64
+      - libsentencepiece0
       - on amd64:
           - libgomp-plugin-amdgcn1
           - libgomp-plugin-hsa1
