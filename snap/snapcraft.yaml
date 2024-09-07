@@ -42,8 +42,10 @@ parts:
     python-requirements:
       - requirements.txt
     build-packages:
-      - cmake
-      - libffi-dev
+      - on armhf: # since missing prebuild pip packages
+          - cmake
+          - libffi-dev
+          - pkg-config
     stage-packages:
       - libgomp1
       - on amd64:
