@@ -15,6 +15,7 @@ grade: stable
 confinement: strict
 environment:
   HOME: $SNAP_USER_COMMON
+  TRANSFORMERS_NO_ADVISORY_WARNINGS: "1"
 apps:
   r2ai:
     command: bin/r2ai
