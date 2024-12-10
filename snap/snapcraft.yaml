@@ -15,6 +15,10 @@ grade: stable
 confinement: strict
 environment:
   HOME: $SNAP_USER_COMMON
+  XDG_CONFIG_HOME: $SNAP_USER_COMMON/config
+  XDG_CACHE_HOME: $SNAP_USER_COMMON/cache
+  XDG_DATA_HOME: $SNAP_USER_COMMON/data
+  XDG_STATE_HOME: $SNAP_USER_COMMON/state
   TRANSFORMERS_NO_ADVISORY_WARNINGS: "1"
 apps:
   r2ai:
