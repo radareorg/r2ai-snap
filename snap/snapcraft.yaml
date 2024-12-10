@@ -49,8 +49,6 @@ parts:
     source-type: git
     source-depth: 1
     source-tag: $SNAPCRAFT_PROJECT_VERSION
-    python-requirements:
-      - requirements.txt
     build-packages:
       # only used when prebuild pip packages are missing
       - cmake
