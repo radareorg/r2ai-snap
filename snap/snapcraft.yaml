@@ -1,5 +1,5 @@
 name: r2ai
-version: '0.9.2'
+version: '0.9.4'
 summary: local language model for radare2
 description: |
   Run a language model in local, without internet, to entertain you or help answering questions about radare2 or reverse engineering in general.
