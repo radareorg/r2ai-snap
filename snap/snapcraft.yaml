@@ -52,7 +52,7 @@ parts:
     source: https://github.com/radareorg/r2ai.git
     source-type: git
     source-depth: 1
-    source-tag: $SNAPCRAFT_PROJECT_VERSION
+    source-tag: 0.9.6
     source-subdir: py
     build-packages:
       # only used when prebuild pip packages are missing
