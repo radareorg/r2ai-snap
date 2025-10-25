@@ -1,5 +1,5 @@
 name: r2ai
-version: '1.2.0'
+version: '1.2.2'
 summary: local language model for radare2
 description: |
   Run a language model in local, without internet, to entertain you or help answering questions about radare2 or reverse engineering in general.
@@ -52,7 +52,7 @@ parts:
     source: https://github.com/radareorg/r2ai.git
     source-type: git
     source-depth: 1
-    source-tag: 1.2.0
+    source-tag: 1.2.2
     source-subdir: py
     build-packages:
       # only used when prebuild pip packages are missing
